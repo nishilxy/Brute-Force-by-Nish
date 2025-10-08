@@ -1,22 +1,3 @@
-#!/usr/bin/env python3
-"""
-Safe educational simulator: "Brute-force" demo CLI (local-only).
-
-This script simulates login attempts against a local, in-memory password check.
-It is intended for learning only — it DOES NOT perform network requests or
-attack any external system.
-
-Features:
- - Menu-driven CLI
- - Simulated brute-force using a wordlist (file or generated)
- - Rate limiting and account lockout simulation (defensive behavior)
- - Password strength checker
- - Wordlist generator (combinatoric with limits)
- - Logging of attempts to a local file
-
-Important: Use only on systems you own or where you have explicit permission.
-"""
-
 import time
 import hashlib
 import getpass
@@ -24,19 +5,19 @@ import random
 import sys
 from datetime import datetime
 
-# --- Configuration (safe defaults) ---
+#Configuration (safe defaults)
 MAX_ATTEMPTS_BEFORE_LOCK = 5
 LOCK_DURATION_SECONDS = 30
 THROTTLE_SECONDS = 0.5  # wait between attempts in the simulation
 ATTEMPT_LOG = "sim_attempts.log"
 
-# --- Simulated "account" (local only) ---
+#Simulated "account"
 # For safety, use a hashed password in-memory. Change for your testing.
 REAL_USERNAME = "testuser"
 REAL_PASSWORD_PLAIN = "S3cureP@ss!"   # change before testing if desired
 REAL_PASSWORD_HASH = hashlib.sha256(REAL_PASSWORD_PLAIN.encode()).hexdigest()
 
-# --- Utilities ---
+#Utilities
 def log_attempt(username, attempt, success):
     ts = datetime.now().isoformat()
     with open(ATTEMPT_LOG, "a") as f:
