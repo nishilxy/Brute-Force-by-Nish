@@ -1,102 +1,36 @@
-⚠️ DISCLAIMER
-Oblivion V1.0 is a educational security tool designed for learning purposes only. This tool should ONLY be used on systems you own or have explicit written permission to test. Unauthorized use against systems you don't own is illegal and unethical.
 
-By using this tool, you agree that the developers are not responsible for any misuse.
+## EDUCATIONAL SECURITY TOOL FOR PASSWORD ANALYSIS & SIMULATION
 
-📖 Overview
-Oblivion is a Python-based brute-force simulation tool created by Nishil Bhimani & Riya Mittal to demonstrate password security concepts in a controlled, educational environment. The tool simulates brute-force attacks with built-in defensive mechanisms to teach both offensive and defensive security principles.
+> **DISCLAIMER**: Oblivion V1.0 is an educational security tool designed for learning purposes only. Use ONLY on systems you own or have explicit written permission to test. Unauthorized access is illegal and unethical.
 
-🎯 Features
-🔐 Core Functionality
-Simulated Brute-Force Attacks: Test password strength against generated wordlists
+---
 
-Wordlist Generation: Create custom wordlists with various suffix patterns
+## PURPOSE
 
-Password Strength Checker: Evaluate password security with heuristic scoring
+Oblivion is a sophisticated password security analysis tool that demonstrates brute-force attack methodologies in a controlled, educational environment. It helps security professionals understand attack vectors to build better defenses.
 
-Attempt Logging: Track all login attempts with timestamps
+---
 
-Defensive Simulations: Includes account lockouts and rate limiting
+## FEATURES
 
-🛡️ Security Features
-Automatic account lockout after 5 failed attempts
+### ATTACK SIMULATION
+- Intelligent Wordlist Generation - Creates targeted password lists based on base words and common patterns
+- Realistic Throttling - Simulates network delays and rate limiting
+- Defense Mechanism Testing - Account lockout simulation with configurable thresholds
+- Comprehensive Logging - Tracks all attempts with timestamps and outcomes
 
-Configurable lockout duration (default: 30 seconds)
+### DEFENSIVE ANALYSIS
+- Password Strength Assessment - Evaluates passwords using multi-factor scoring
+- Security Heuristics - Provides actionable feedback for password improvement
+- Attack Pattern Analysis - Demonstrates common brute-force techniques
 
-Request throttling (0.5 seconds between attempts)
+### OPERATIONAL INTELLIGENCE
+- Interactive Menu System - User-friendly command interface
+- Custom Wordlist Management - Generate, load, and save targeted dictionaries
+- Real-time Monitoring - Live attempt tracking with defensive countermeasures
 
-Comprehensive attempt logging
+---
 
-Educational safety tips and best practices
+## QUICK START
 
-🚀 Installation
-Prerequisites
-Python 3.6 or higher
-
-Required packages: None (uses standard library only)
-
-Clone or download the script:
-git clone https://github.com/nishilxy/Brute-Force-by-Nish
-
-Make the script executable (Linux/Mac):
-chmod 755 testbfone.py
-
-Run the tool: python3 testbfone.py
-
-🛡️ Defensive Mechanisms Demonstrated
-Account Lockout: Temporary lock after multiple failed attempts
-
-Rate Limiting: Artificial delays between login attempts
-
-Secure Password Storage: Uses SHA-256 hashing (educational)
-
-Comprehensive Logging: All attempts are recorded with timestamps
-
-Security Monitoring: Tools to review and analyze attempt patterns
-
-📚 Educational Value
-This tool helps understand:
-
-How brute-force attacks work
-
-Importance of strong passwords
-
-Effectiveness of account lockout policies
-
-Password cracking techniques and prevention
-
-Security monitoring and logging
-
-Ethical hacking principles
-
-🎓 Learning Objectives
-Recognize weak password patterns
-
-Understand common password cracking methods
-
-Learn defensive security measures
-
-Develop ethical testing mindset
-
-Analyze security logs and patterns
-
-⚖️ Legal & Ethical Usage
-CRITICAL: Always follow these guidelines:
-
-✅ Only test on systems you own
-
-✅ Obtain explicit written permission for any testing
-
-✅ Use in controlled educational environments
-
-✅ Respect privacy and legal boundaries
-
-❌ Never use for malicious purposes
-
-❌ Don't test without proper authorization
-
-📄 License
-This project is for educational purposes. Please use responsibly and in compliance with all applicable laws.
-
-🌐 Repository
-https://github.com/nishilxy/Brute-Force-by-Nish
+bash : "python3 testbfone.py"
