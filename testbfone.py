@@ -14,7 +14,7 @@ THROTTLE_SECONDS = 0.5
 ATTEMPT_LOG = "sim_attempts.log"
 
 REAL_USERNAME = "testuser"
-REAL_PASSWORD_PLAIN = "nish"   # change before testing if desired
+REAL_PASSWORD_PLAIN = "nish"
 REAL_PASSWORD_HASH = hashlib.sha256(REAL_PASSWORD_PLAIN.encode()).hexdigest()
 
 def log_attempt(username, attempt, success):
@@ -78,7 +78,7 @@ def simulate_bruteforce(wordlist, username=REAL_USERNAME):
 
         attempts += 1
         print(f"Attempt {attempts}: trying '{pw}' ... ", end="", flush=True)
-        time.sleep(THROTTLE_SECONDS)  # simulate throttle / pacing
+        time.sleep(THROTTLE_SECONDS)
 
         success = check_password(pw)
         log_attempt(username, pw, success)
@@ -88,7 +88,6 @@ def simulate_bruteforce(wordlist, username=REAL_USERNAME):
             return True
         else:
             print("fail")
-            # defensive behavior: lock account after N failed attempts
             if attempts % MAX_ATTEMPTS_BEFORE_LOCK == 0:
                 locked_until = time.time() + LOCK_DURATION_SECONDS
                 print(f"[DEFENSE] Simulated lockout activated for {LOCK_DURATION_SECONDS}s.")
@@ -150,28 +149,28 @@ def view_log():
                 print("Log is empty.")
             else:
                 print("\n--- Attempt log (most recent last) ---")
-                print(data.splitlines()[-50:])  # show last 50 lines as list
+                print(data.splitlines()[-50:])
     except FileNotFoundError:
         print("Log file not found. No attempts logged yet.")
 
 def main_menu():
     #name=pyfiglet.figlet_format("Oblivion")
     #print(name)
-    print("Oblivion V1.0 by Nishil Bhimani & Riya Mittal - This tool is only for educational purpose only, please do not use this for any offensive purposes (This is a wish)")
+    print("\nOblivion V1.0 by Nishil Bhimani & Riya Mittal - This tool is only for educational purpose only, please do not use this for any offensive purposes (This is a wish)")
     print("THE TOOL IS STILL IN IT'S BETA PHASE")
-    print("https://github.com/nishilxy/Brute-Force-by-Nish")
+    print("\nhttps://github.com/nishilxy/Brute-Force-by-Nish")
     
     while True:
         print("\nOblivion is tool to guess/crack valid login/password pairs.")
         print("\nMenu:")
-        # print(" 1) Simulate brute-force attack (use generated wordlist)")
-        print(" 1) Load wordlist from file and simulate")
-        print(" 2) Generate wordlist interactively")
-        print(" 3) Password strength checker")
-        print(" 4) View local attempt log")
-        print(" 5) Show safety & defensive tips")
+        print(" 1) Simulate brute-force attack (use generated wordlist)")
+        print(" 2) Load wordlist from file and simulate")
+        print(" 3) Generate wordlist interactively")
+        print(" 4) Password strength checker")
+        print(" 5) View local attempt log")
+        print(" 6) Show safety & defensive tips")
         print(" 0) Exit")
-        choice = input("Choose an option: ").strip()
+        choice = input("\nChoose an option: ").strip()
         if choice == "1":
             base = input("Base for auto wordlist (e.g., 'password' or 'john'): ").strip() or "password"
             wl = generate_wordlist(base, max_len=2, max_words=500)
