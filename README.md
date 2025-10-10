@@ -98,3 +98,5 @@ CRITICAL: Always follow these guidelines:
 📄 License
 This project is for educational purposes. Please use responsibly and in compliance with all applicable laws.
 
+🌐 Repository
+https://github.com/nishilxy/Brute-Force-by-Nish
