@@ -39,7 +39,7 @@ Clone or download the script:
 git clone https://github.com/nishilxy/Brute-Force-by-Nish
 
 Make the script executable (Linux/Mac):
-chmod +x testbfone.py
+chmod 755 testbfone.py
 
 Run the tool: python3 testbfone.py
 
