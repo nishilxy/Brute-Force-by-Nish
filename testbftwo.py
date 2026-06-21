@@ -156,7 +156,7 @@ def view_log():
 def main_menu():
     #name=pyfiglet.figlet_format("Oblivion")
     #print(name)
-    print("\nOblivion V1.0 by Nishil Bhimani & Riya Mittal")
+    print("\nOblivion V1.0 by Nishil Bhimani")
     print("\nDISCLAIMER Oblivion V1.0 is a educational security tool designed for learning purposes only. This tool should ONLY be used on systems you own or have explicit written permission to test. Unauthorized use against systems you don't own is illegal and unethical.")
     print("\nThis project is for educational purposes. Please use responsibly and in compliance with all applicable laws.")
     print("\nTHE TOOL IS STILL IN IT'S BETA PHASE")
